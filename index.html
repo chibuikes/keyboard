@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 
 <head>
@@ -225,3 +225,250 @@ document.getElementById("message").innerText=document.getElementById("message").
 
 </body>
 </html>
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    @media (max-width:450px){
+      td{
+      margin: 5px 2px;
+      position:relative;
+      
+  
+    }
+    div{
+      color:white;
+    }
+    body{
+      /*
+      background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgSlJLtallt2F6c5nMzgEM2f1YvcJUcD3rcw&usqp=CAU");*/
+      background-size:cover; background-repeat:no-repeat;
+      background: linear-gradient(99deg,black,gray,gray);
+    }
+    tr{
+      display:flex;
+      font-size: 20px
+      
+    }
+    table{
+  background:hsl(191.5,100%,0%);
+  color:white;
+  border-radius:10px;
+  padding: 5px;
+  
+  
+    }
+    td{
+      border-radius: 4px;
+      background: gray;
+      padding: 9px;
+    }
+      
+    .caps{
+      text-transform: uppercase;
+      margin:7px 1px;
+    }
+    #message{
+      border:2px solid black;
+      width:100vw;
+      font-size: 20px;
+    }
+    .visible{
+      visibility: hidden;
+    }
+    p{
+      color:white;
+    }
+    .anim{
+      animation-name: key;
+      animation-duration:500ms
+
+    }
+    @keyframes key{
+      0%{
+        text-shadow:0px -100px black; 
+      }
+      100%{
+            text-shadow:0px -100px black; 
+      }
+    }
+    }
+    @media(min-width:650px){
+      td{
+      margin: 5px 25px;
+      position:relative;
+      
+  
+    }
+    tr{
+      display:flex;
+      font-size: 50px
+      
+    }
+    table{
+  background:linear-gradient(45deg, red, cyan);
+  color:black;
+  border-radius:10px;
+  width:80vw;
+  margin:auto;
+    }
+    .caps{
+      text-transform: uppercase;
+      margin:5px 23px;
+    }
+    #message{
+      border:2px solid black;
+      width:100vw;
+      font-size: 40px;
+    }
+    .visible{
+      visibility: hidden;
+    }
+        .back{
+      background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgSlJLtallt2F6c5nMzgEM2f1YvcJUcD3rcw&usqp=CAU"); 
+      background-size:cover; background-repeat:no-repeat;
+    }
+    .anim{
+      animation-name: key;
+      animation-duration:500ms
+
+    }
+    @keyframes key{
+      0%{
+        text-shadow:0px -100px black; 
+      }
+      100%{
+            text-shadow:0px -100px black; 
+      }
+    }
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+   
+ <div id="output">chan </div>
+
+ -->
+    <div id="message" onclick="gap()">  </div>
+ <table>
+   <tr >
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
+     <td onclick="getData(this)" >q </td>
+     <td onclick="getData(this)">w</td>
+     <td onclick="getData(this)">e</td>
+     <td onclick="getData(this)">r</td>
+     <td onclick="getData(this)">t</td>
+     <td onclick="getData(this)">y</td>
+     <td onclick="getData(this)">u</td>
+     <td onclick="getData(this)">i</td>
+     <td onclick="getData(this)">o</td>
+     <td onclick="getData(this)">p</td>
+   </tr>
+   <tr >
+     <td onclick="getData(this)">a</td>
+     <td onclick="getData(this)">s</td>
+     <td onclick="getData(this)">d</td>
+     <td onclick="getData(this)">f</td>
+     <td onclick="getData(this)">g</td>
+     <td onclick="getData(this)">h</td>
+     <td onclick="getData(this)">j</td>
+     <td onclick="getData(this)">k</td>
+     <td onclick="getData(this)">l</td>
+   </tr>
+     <tr >
+       <td onclick="cap()">CAPS</td>
+       <td onclick="getData(this)">z</td>
+       <td onclick="getData(this)">x</td>
+       <td onclick="getData(this)">c</td>
+       <td onclick="getData(this)">v</td>
+       <td onclick="getData(this)">b</td>
+       <td onclick="getData(this)" class="">n</td>
+       <td onclick="getData(this)">m</td>
+     </tr>
+      <tr>
+        <td onclick="getData(this)">!</td>
+        <td onclick="getData(this)">@</td>
+        <td onclick="getData(this)">.</td>
+        <td onclick="getData(this)">,</td>
+        <td onclick="getData(this)">:</td>
+        <td onclick="space()" class="visibe">_</td>
+        <td onclick="getData(this)">?</td>
+        <td onclick="getData(this)">-</td>
+        <td onclick="getData(this)">'</td>
+          <td onclick="Del()">
+          DEL</td>
+      </tr>
+       </table>
+      
+          <button onclick="back()"> magic</button>
+ <script>
+ /*
+ function build(){
+  console.log(this)
+ let arr2= document.getElementsByTagName("td");
+ 
+ let arr=["orange","apples","pineapples","banana"];
+ for (let i = 0; i < arr.length; i++) {
+   arr2.item(i*2+1).innerText = arr[i]
+    arr2.item(i*2+1).setAttribute("class","data-row")
+  
+ }
+ 
+ 
+ }*/
+ function back(){
+   document.getElementsByTagName("body").item(0).setAttribute("class","back")
+   
+ }
+ 
+ function cap(){
+ let s= document.getElementsByTagName("td");
+   for(let i=0; i<s.length; i++){
+  // s.item(i).innerText= s.item(i).innerText.toUpperCase()
+
+  s.item(i).classList.toggle("caps")
+
+   //  document.getElementById("shape").classList.toggle("hide");
+
+   }
+ }
+ function getData(arr){
+   arr.classList.toggle("anim")
+   let a=arr.innerText;
+document.getElementById("message").innerText=document.getElementById("message").innerText+a;
+
+ }
+ function Del() {
+   //let a =document.getElementById("message").innerText;
+ let b=  document.getElementById("message").innerText.split("")
+  d= b.pop()
+  
+  document.getElementById("message").innerText=b.join("")
+ }
+ function space(){
+    
+    document.getElementById("message").innerText=document.getElementById("message").innerText.split("-").join(" ")
+ }
+ function bn(){
+  document.getElementsByTagName("div").item(0).innerText=document.getElementsByTagName("div").item(0).innerText.split("-").join(" ")
+ }
+ </script>
+<p>
+  <b >NB:</b>"-" should be used as space, then press underscore
+</p>
+</body>
+</html>
+
